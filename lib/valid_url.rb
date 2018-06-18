@@ -19,7 +19,7 @@ module ActiveModel
         end
 
         unless !invalid && valid_scheme?(uri.scheme) && valid_host?(uri.host) && valid_path?(uri.path)
-          record.errors[attribute] << (options[:message] || "is an invalid URL")
+          record.errors[attribute] << (options[:message] || "is invalid")
         end
       end
 
